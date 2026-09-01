@@ -24,7 +24,17 @@ protocol CGMTransmitterDelegate:AnyObject {
     
     /// to pass some text error message, delegate can decide to show to user, log, ...
     func errorOccurred(xDripError: XdripError)
+
+    /// Reports a decoded sensor/transmitter health state without promoting generic BLE errors.
+    func sensorHealthEventOccurred(_ event: CGMSensorHealthEvent)
+
+    /// Reports the decoded result of a sensor-start request.
+    /// Dexcom G6/ONE provides this callback; the default implementation does nothing.
+    func sensorSessionStartResultReceived(_ result: CGMSensorSessionStartResult)
     
 }
 
-
+extension CGMTransmitterDelegate {
+    func sensorHealthEventOccurred(_ event: CGMSensorHealthEvent) {}
+    func sensorSessionStartResultReceived(_ result: CGMSensorSessionStartResult) {}
+}

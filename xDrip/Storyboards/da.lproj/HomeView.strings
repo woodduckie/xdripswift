@@ -36,7 +36,7 @@
 "success" = "Success";
 "failed" = "Failed";
 "dexcomBatteryTooLow" = "The Transmitter battery is too low!";
-"enterSensorCode" = "If you don't know the sensor code use 0000 but be aware that you will need to manually calibrate before you get readings.";
+"enterSensorCode" = "If you don't know the sensor code, leave this empty to use 0000. Pressing OK without a code will use 0000 as the sensor code, or will just capture the current session if one is already started.";
 "stopSensorConfirmation" = "Are you sure you want to stop the sensor?";
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -59,7 +59,7 @@
 "sensorDuration" = "Sensor Duration";
 
 /// nightscout is not enabled
-"nightscoutURLMissing" = "Nightscout URL missing";
+"nightscoutURLMissing" = "URL missing";
 
 /// ask the user to disconnect and reconnect the sensor
 "reconnectLibreDataSource" = "Disconnect and reconnect Libre sensor";
@@ -69,3 +69,90 @@
 
 /// no data source is enabled or connected
 "noDataSourceConnected" = "No CGM data source connected";
+
+"postProcessingFiveMinuteReadings" = "5-minute readings";
+"postProcessingAlgorithm" = "Algorithm";
+"sensorLifetimeRemainingFormat" = "%@ tilbage";
+"postProcessingAlgorithmSavitzkyGolay" = "Savitzky-Golay";
+
+"sensorManagementNoiseTitle" = "Sensorstøj";
+"sensorManagementNoiseShortTerm" = "Seneste 30 minutter";
+"sensorManagementNoiseLongTerm" = "Seneste 4 timer";
+"sensorManagementNoiseCollecting" = "Indsamler data";
+"sensorManagementNoiseLow" = "Lav";
+"sensorManagementNoiseElevated" = "Forhøjet";
+"sensorManagementNoiseVeryHigh" = "Meget høj";
+"sensorManagementNoiseExtreme" = "Ekstrem";
+"sensorManagementNoiseFlatline" = "Sensoren er sandsynligvis svigtet.";
+"sensorNoiseWarningExtremeTitle" = "Ekstrem sensorstøj";
+"sensorNoiseWarningPersistentTitle" = "Vedvarende sensorstøj";
+"sensorNoiseWarningFlatlineTitle" = "Sensorsignalet er fladt";
+"sensorNoiseHistoryTitle" = "Støjhistorik";
+"sensorNoiseHistoryCurrentTitle" = "Aktuelle målinger";
+"sensorNoiseHistoryChartTitle" = "Støj over tid";
+"sensorNoiseHistoryRangeTitle" = "Tidsinterval";
+"sensorNoiseHistoryDayRange" = "1d";
+"sensorNoiseHistoryThreeDayRange" = "3d";
+"sensorNoiseHistoryWeekRange" = "7d";
+"sensorNoiseHistoryAllRange" = "Alle";
+"sensorNoiseHistoryShortCompact" = "30 min";
+"sensorNoiseHistoryLongCompact" = "4 t";
+"sensorNoiseHistoryLoading" = "Opbygger sensorhistorik";
+"sensorNoiseHistoryNoDataTitle" = "Endnu ikke nok støjdata";
+"sensorNoiseHistoryNoDataMessage" = "Diagrammet vises, når der er indsamlet nok sensormålinger.";
+"sensorNoiseHistoryChartAccessibility" = "Diagram over sensorens støjhistorik";
+"pumpBattery" = "Batteri";
+"pumpReservoir" = "Reservoir";
+"sensorManagementSessionLifetime" = "Elapsed / Remaining";
+"sensorManagementSessionDetails" = "Session Details";
+"sensorManagementCalibrationOpenTitle" = "Calibration Details";
+"sensorManagementCGMType" = "CGM Type";
+"sensorManagementLastCalibration" = "Seneste";
+"sensorManagementStatusActive" = "Sensor Active";
+"sensorManagementStarted" = "Started";
+"sensorManagementEnds" = "Ends";
+"sensorHealthPersistentNoiseTitle" = "Meget høj sensorstøj";
+"sensorHealthPersistentNoiseGuidance" = "Meget høj støj i 12 timer. Overvej at udskifte sensoren, hvis det fortsætter.";
+"sensorHealthFlatlineTitle" = "Sensorsignalet er fladt";
+"sensorHealthFlatlineGuidance" = "Målingerne har været uændrede i 30 minutter. Det betyder normalt, at sensoren er defekt/udløbet.";
+"sensorHealthTemporaryIssueTitle" = "Midlertidigt sensorproblem";
+"sensorHealthTemporaryIssueGuidance" = "Midlertidigt sensorproblem i 3 timer. Kontrollér med et blodsukkerapparat, og følg producentens vejledning.";
+"sensorHealthSensorFailedTitle" = "Sensorfejl";
+"sensorHealthSensorFailedGuidance" = "Sensorfejl rapporteret. Udskift sensoren.";
+"sensorHealthTransmitterFailedTitle" = "Senderfejl";
+"sensorHealthTransmitterFailedGuidance" = "Senderfejl rapporteret. Kontrollér eller udskift senderen.";
+"connectingToCGM" = "Forbinder til CGM...";
+"reconnectingToCGM" = "Genopretter forbindelse til CGM...";
+
+/* Dexcom G6 sensor-label scanning */
+"scanWithCamera" = "Scan med kamera";
+"chooseSensorLabelPhoto" = "Vælg foto";
+"readingSensorLabel" = "Læser sensormærkat...";
+"scanSensorLabel" = "Scan sensormærkat";
+"sensorCodeScannerGuidance" = "Placer Data Matrix inden for rammen.";
+"sensorCodeScannerTorch" = "Lommelygte";
+"cameraAccessRequired" = "Kameraadgang kræves";
+"cameraAccessRequiredMessage" = "Tillad kameraadgang i Indstillinger, indtast koden manuelt, eller vælg et foto.";
+"openSettings" = "Åbn Indstillinger";
+"cameraUnavailable" = "Kamera ikke tilgængeligt";
+"cameraUnavailableMessage" = "Indtast sensorkoden manuelt, eller vælg et foto.";
+"sensorInformationTitle" = "Sensoroplysninger";
+"sensorLotNumber" = "Lotnummer";
+"sensorSerialNumberMetadata" = "Sensorens serienummer";
+"sensorLabelReviewFooter" = "Kontrollér de afkodede oplysninger, før sensoren startes.";
+"sensorLabelScanFailed" = "Sensormærkat ikke læst";
+"multipleSensorLabelsFound" = "Fotoet indeholder mere end én sensormærkat. Vælg et foto med én mærkat.";
+"noSensorLabelFound" = "Der blev ikke fundet en gyldig Dexcom G6-sensormærkat på fotoet.";
+"invalidSensorLabelFound" = "Der blev fundet en Data Matrix, men den var ikke en gyldig Dexcom G6-sensormærkat.";
+"sensorLabelPhotoUnreadable" = "Det valgte foto kunne ikke læses.";
+"sensorCodeMetadata" = "Sensorkode";
+"scannedSensorLabelCode" = "Scannet mærkatkode";
+"noCodeSensorSessionValue" = "0000 (Session uden kode)";
+"sensorCodeUnknown" = "Ukendt";
+"sensorSessionOrigin" = "Sessionsoprindelse";
+"sensorSessionOriginUnknown" = "Ukendt";
+"sensorSessionOriginAwaitingTransmitter" = "Afventer sender";
+"sensorSessionOriginStartedByApp" = "Startet af xDrip4iOS";
+"sensorSessionOriginExistingAdopted" = "Eksisterende session overtaget";
+"sensorSessionOriginTransmitterDetected" = "Registreret fra sender";
+"sensorSessionOriginRejected" = "Startanmodning afvist";

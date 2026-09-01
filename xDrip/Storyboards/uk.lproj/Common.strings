@@ -52,7 +52,7 @@
 "add" = "Add";
 
 /// literally yes, without capital
-"yes" = "Yes";
+"yes" = "Так";
 
 /// mg/dl
 "common_mgdl" = "mg/dL";
@@ -122,6 +122,8 @@
 
 /// literal translation needed
 "common_days" = "days";
+"common_landscape_comparingWithLast" = "Порівняння з останніми:";
+"common_landscape_comparisonDays" = "%d днів";
 
 /// the word today
 "common_todayshort" = "Today";

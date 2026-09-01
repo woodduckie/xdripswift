@@ -1,14 +1,15 @@
 import Foundation
 
-/// used by BluetoothPeripheral UI view controllers - it's the glue between BluetoothPeripheralManager and UIViewControllers
+/// Operations exposed by BluetoothPeripheralManager to the SwiftUI Bluetooth views.
 protocol BluetoothPeripheralManaging: BluetoothTransmitterDelegate {
     
     /// to scan for a new BluetoothPeripheral - callback will be called when a new BluetoothPeripheral is found and connected
     /// - parameters:
     ///     - transmitterId : only for devices that need a transmitterID (currently only Dexcom)
+    ///     - dexcomG6BluetoothSlot: the role to use when scanning for a G6 transmitter
     ///     - callBackForScanningResult : to be called with result of startScanning
     ///     - bluetoothTransmitterDelegate : optional
-    func startScanningForNewDevice(type: BluetoothPeripheralType, transmitterId: String?, bluetoothTransmitterDelegate: BluetoothTransmitterDelegate?, callBackForScanningResult: ((BluetoothTransmitter.startScanningResult) -> Void)?, callback: @escaping (BluetoothPeripheral) -> Void)
+    func startScanningForNewDevice(type: BluetoothPeripheralType, transmitterId: String?, dexcomG6BluetoothSlot: DexcomG6BluetoothSlot, bluetoothTransmitterDelegate: BluetoothTransmitterDelegate?, callBackForScanningResult: ((BluetoothTransmitter.startScanningResult) -> Void)?, callback: @escaping (BluetoothPeripheral) -> Void)
     
     /// stops scanning for new device
     func stopScanningForNewDevice()
@@ -18,6 +19,10 @@ protocol BluetoothPeripheralManaging: BluetoothTransmitterDelegate {
     
     /// try to connect to the M5Stack
     func connect(to bluetoothPeripheral: BluetoothPeripheral)
+
+    /// Persists whether the app should maintain this peripheral and resets the current
+    /// activation's successful-connection marker when the choice changes.
+    func setConnectionEnabled(_ enabled: Bool, for bluetoothPeripheral: BluetoothPeripheral)
     
     /// returns the BluetoothTransmitter for the specified bluetoothPeripheral
     /// - parameters:
@@ -49,12 +54,12 @@ protocol BluetoothPeripheralManaging: BluetoothTransmitterDelegate {
     
     /// to pass new value off nonFixedSlopeEnabled
     ///
-    /// when user changes the nonFixed value in BluetoothPeripheralViewController, this function will be called
+    /// when user changes the nonFixed value in the Bluetooth peripheral detail view, this function will be called
     func receivedNewValue(nonFixedSlopeEnabled: Bool, for bluetoothPeripheral: BluetoothPeripheral)
 
     /// to pass new value off webOOPEnabled
     ///
-    /// when user changes webOOP values in BluetoothPeripheralViewController, this function will be called
+    /// when user changes webOOP values in the Bluetooth peripheral detail view, this function will be called
     func receivedNewValue(webOOPEnabled: Bool, for bluetoothPeripheral: BluetoothPeripheral)
     
     /// - returns the currently in use CGMTransmitter, nil if non in use.

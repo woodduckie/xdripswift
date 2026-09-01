@@ -74,6 +74,14 @@
 
 /// text in button to start scanning
 "scan" = "Scan";
+"medtrumNanoPumpScanNoticeTitle" = "Povezava s črpalko Medtrum Nano";
+"medtrumNanoPumpScanNoticeMessage" = "Ta možnost se poveže s črpalko Medtrum Nano in ne neposredno z oddajnikom Nano CGM.\n\nPred iskanjem se prepričajte, da EasyPatch deluje, je povezan s črpalko in prejema trenutne vrednosti CGM.\n\nEasyPatch mora ves čas delovati in še naprej prejemati vrednosti.";
+"libre2ScanNoticeTitle" = "Bluetooth aplikacije Libre";
+"libre2ScanNoticeMessage" = "Pred iskanjem v nastavitvah iPhona onemogočite dovoljenje Bluetooth za aplikacijo Libre.\n\nDovoljenje Bluetooth za aplikacijo Libre mora biti ves čas onemogočeno. V nasprotnem primeru lahko aplikacija Libre prevzame povezavo s senzorjem in tej aplikaciji prepreči prejemanje vrednosti.";
+"dexcomG6ScanNoticeTitle" = "Povezava aplikacije Dexcom";
+"dexcomG6ScanNoticeMessage" = "Pred iskanjem prisilno zaprite aplikacijo Dexcom ali onemogočite njeno dovoljenje Bluetooth.\n\nAplikacija Dexcom ne sme biti povezana z oddajnikom, medtem ko ta aplikacija išče ali prejema vrednosti.";
+"dexcomG7ScanNoticeTitle" = "Potrebna je aplikacija Dexcom G7";
+"dexcomG7ScanNoticeMessage" = "Pred iskanjem se prepričajte, da aplikacija Dexcom G7 deluje v ozadju, je povezana s senzorjem in prejema trenutne vrednosti glukoze.\n\nAplikacija Dexcom G7 mora ves čas delovati in še naprej prejemati vrednosti.";
 
 /// cell text, where the disconnection timestamp is shown
 "disConnectedAt" = "Disconnected At";
@@ -95,7 +103,11 @@
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 /// Dexcom bluetooth screen. Is another app used in parallel or not
-"useOtherDexcomApp" = "Use With Other App";
+"useOtherDexcomApp" = "Način soobstoja";
+"useOtherDexcomAppCoexistenceFooter" = "Način soobstoja nam omogoča delovanje z drugo aplikacijo, na primer Dexcom ali CamAPS. Ta aplikacija mora še naprej delovati v ozadju.";
+"useOtherDexcomAppPrimaryFooter" = "Primarni način se poveže kot glavna aplikacija in nadzoruje povezavo.";
+"runningInCoexistenceMode" = "Deluje v načinu soobstoja";
+"runningInPrimaryMode" = "Deluje v primarnem načinu";
 
 /// Disconnect transmitter, title
 "confirmDisconnectTitle" = "Confirm Disconnect";
@@ -142,3 +154,48 @@
 
 /// Tell the user the scan was successful and to just wait now for connection
 "nfcScanSuccessfulMessage" = "Click OK and just wait to allow the Libre sensor to finish connecting via bluetooth.\n\nIn a short while the status should change to 'Connected'.";;
+
+/// Bluetooth peripheral Read Success screen. Section title for the hourly timeline
+"readSuccessLast24Hours" = "Zadnjih 24 ur";
+/// Bluetooth peripheral Read Success screen. Summary of received readings out of expected readings
+"readSuccessReadingsReceived" = "Prejetih %d od %d odčitkov";
+/// Bluetooth peripheral Read Success screen. Footer explaining how expected readings are calculated
+"readSuccessCadenceFooter" = "Pričakovani odčitki temeljijo na opaženi kadenci oddajnika za %@.";
+/// Bluetooth peripheral Read Success screen. Timeline legend label for good read success
+"readSuccessLegendGood" = "Dobro";
+/// Bluetooth peripheral Read Success screen. Timeline legend label for reduced read success
+"readSuccessLegendLow" = "Nizko";
+/// Bluetooth peripheral Read Success screen. Timeline legend label for poor read success
+"readSuccessLegendPoor" = "Slabo";
+/// Bluetooth peripheral Read Success screen. Timeline legend label when no readings are expected or available
+"readSuccessLegendNoData" = "Ni podatkov";
+/// Bluetooth peripheral Read Success screen. Accessibility label for timeline hours with no expected readings
+"readSuccessNoReadingsExpected" = "Ni pričakovanih odčitkov";
+/// Bluetooth peripheral Read Success screen. Accessibility label for an hourly timeline bucket
+"readSuccessTimelineAccessibility" = "%0.1f odstotka, %d od %d odčitkov";
+
+/// Bluetooth peripheral screen. Row title and screen title for read success information
+"readSuccess" = "Uspešnost odčitkov";
+/// Bluetooth peripheral Read Success screen. Timeline axis label for the current time
+"readSuccessNow" = "Zdaj";
+"scanningForTransmitter" = "Iskanje...";
+"connecting" = "Povezovanje";
+"connectingToTransmitter" = "Connecting...";
+"reconnecting" = "Ponovno povezovanje";
+"reconnectingToTransmitter" = "Ponovno povezovanje...";
+"waiting" = "Čakanje...";
+
+/* Dexcom G6 Bluetooth authentication slot */
+"dexcomG6BluetoothSlot" = "Kanal Bluetooth";
+"dexcomG6MobileAppSlot" = "Mobilna aplikacija (Privzeto)";
+"dexcomG6MobileAppSlotShort" = "Mobilna aplikacija";
+"dexcomG6MedicalDeviceSlot" = "Sprejemnik ali črpalka (Poskusno)";
+"dexcomG6MedicalDeviceSlotShort" = "Črpalka";
+"dexcomG6MobileAppSlotFooter" = "Kanal Mobilna aplikacija je privzet za telefonske povezave.";
+"dexcomG6MedicalDeviceSlotFooter" = "Kanal Sprejemnik ali črpalka je običajno rezerviran za sprejemnik Dexcom ali združljivo črpalko. Če ga uporablja ta aplikacija, ostane kanal Mobilna aplikacija na voljo za telefon ali drugo napravo.";
+"dexcomG6BluetoothSlotUnavailableInCoexistenceMode" = "Ni na voljo v načinu soobstoja";
+"dexcomG6MedicalDeviceSlotWarning" = "Kanal Sprejemnik ali črpalka je običajno rezerviran za sprejemnik Dexcom ali združljivo črpalko. Če ga izberete, se ta naprava morda ne bo mogla povezati.\n\nUporaba kanala Sprejemnik ali črpalka naj se šteje samo za poskusno. Izbira začne veljati ob naslednjem preverjanju pristnosti.";
+"dexcomG6AnubisSlot" = "Kanal 3 (Anubis, poskusno)";
+"dexcomG6AnubisSlotShort" = "Kanal 3";
+"dexcomG6AnubisSlotFooter" = "Kanal 3 je na voljo samo pri oddajnikih Anubis. Je poskusni in pušča kanala Mobilna aplikacija ter Sprejemnik ali črpalka na voljo drugim napravam.";
+"dexcomG6AnubisSlotWarning" = "Kanal 3 je poskusni kanal, ki je na voljo samo pri oddajnikih Anubis.\n\nKanal 3 uporabljajte samo za preizkušanje. Izbira začne veljati ob naslednjem preverjanju pristnosti.";
